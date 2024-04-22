@@ -1,0 +1,5 @@
+{
+  "emmet.triggerExpansionOnTab": true,
+
+  "angular.enable-strict-mode-prompt": false
+}
