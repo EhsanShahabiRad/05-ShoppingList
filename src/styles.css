@@ -1,0 +1,7 @@
+hr.transparent {
+  border: none;
+  background-color: transparent;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 0;
+}
