@@ -1,1 +1,31 @@
-<p>shopping-edit works!</p>
+<!-- A form for adding or deleting items -->
+<div class="row">
+  <div class="col-xs-12">
+    <form>
+      <!-- A row containing input fields for the name and amount -->
+      <div class="row">
+        <!-- An input field for the name -->
+        <div class="col-sm-5 form-group">
+          <label for="name">name</label>
+          <input type="text" class="form-control" id="name" />
+        </div>
+        <!-- An input field for the amount -->
+        <div class="col-sm-2 form-group">
+          <label for="amount">Amount</label>
+          <input type="number" class="form-control" id="amount" />
+        </div>
+      </div>
+      <!-- A row containing buttons for adding, deleting, and clearing input -->
+      <div class="row">
+        <div class="col-xs-12">
+          <!-- A button for adding an item -->
+          <button class="btn btn-success" type="submit">Add</button>
+          <!-- A button for deleting an item -->
+          <button class="btn btn-danger" type="button">Delete</button>
+          <!-- A button for clearing input -->
+          <button class="btn btn-primary" type="button">Clear</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
