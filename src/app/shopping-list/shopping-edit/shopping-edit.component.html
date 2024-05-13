@@ -7,19 +7,21 @@
         <!-- An input field for the name -->
         <div class="col-sm-5 form-group">
           <label for="name">name</label>
-          <input type="text" class="form-control" id="name" />
+          <input type="text" class="form-control" id="name" #nameInput />
         </div>
         <!-- An input field for the amount -->
         <div class="col-sm-2 form-group">
           <label for="amount">Amount</label>
-          <input type="number" class="form-control" id="amount" />
+          <input type="number" class="form-control" id="amount" #amountInput />
         </div>
       </div>
       <!-- A row containing buttons for adding, deleting, and clearing input -->
       <div class="row">
         <div class="col-xs-12">
           <!-- A button for adding an item -->
-          <button class="btn btn-success" type="submit">Add</button>
+          <button class="btn btn-success" type="submit" (click)="onAddItem()">
+            Add
+          </button>
           <!-- A button for deleting an item -->
           <button class="btn btn-danger" type="button">Delete</button>
           <!-- A button for clearing input -->
