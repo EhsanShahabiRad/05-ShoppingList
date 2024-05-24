@@ -5,20 +5,30 @@ nav.navbar.navbar-default>div.container-fluid>(div.navbar-header+div.collapse.na
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-        <button type="button" class="navbar-toggle" (click)="collapsed = !collapsed">
-          <span class="icon-bar" *ngFor="let iconBar of [1, 2, 3]"></span>
-        </button>
-        <a routerLink="/" class="navbar-brand">Recipe Book</a>
-      </div>
-      <div class="navbar-collapse" [class.collapse]="collapsed" (window:resize)="collapsed = true">
+      <button
+        type="button"
+        class="navbar-toggle"
+        (click)="collapsed = !collapsed"
+      >
+        <span class="icon-bar" *ngFor="let iconBar of [1, 2, 3]"></span>
+      </button>
+      <a routerLink="/" class="navbar-brand">Recipe Book</a>
+    </div>
+    <div
+      class="navbar-collapse"
+      [class.collapse]="collapsed"
+      (window:resize)="collapsed = true"
+    >
       <!-- ul.nav.navbar-nav>li*2>a[href="#"]{${Recipes}|${Shopping List}}+ul.nav.navbar-nav.navbar-right>li.dropdown>ul.dropdown-menu -->
       <!-- ul.nav.navbar-nav>(li>a[href="#"]{Recipes}^^li>a[href="#"]{Shopping List})^^ul.nav.navbar-nav.navbar-right>li.dropdown>ul.dropdown-menu -->
       <ul class="nav navbar-nav">
         <li><a href="#" (click)="onSelected('recipe')">Recipes</a></li>
-        <li><a href="#" (click)="onSelected('shopping-list')">Shopping List</a></li>
+        <li>
+          <a href="#" (click)="onSelected('shopping-list')">Shopping List</a>
+        </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
+        <li class="dropdown" appDropdown>
           <!-- a.dropdown-toggle[href="#" role="button"]{Manage} -->
           <a href="#" class="dropdown-toggle" role="button"
             >Manage<span class="caret"></span
